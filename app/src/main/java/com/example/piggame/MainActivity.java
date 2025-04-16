@@ -1,5 +1,6 @@
 package com.example.piggame;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -22,5 +23,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         System.out.println("hello gng");
+        startActivity(new Intent(MainActivity.this, PlayerSelect.class));
     }
 }
