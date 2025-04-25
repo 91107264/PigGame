@@ -18,7 +18,7 @@ public class PlayerSelect extends AppCompatActivity {
 
     TextView textView;
     NumberPicker numberPicker;
-    private static int playerCount;
+    private static int playerCount = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
