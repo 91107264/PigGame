@@ -2,8 +2,11 @@ package com.example.piggame;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,7 @@ public class PlayerSelect extends AppCompatActivity {
 
     TextView textView;
     NumberPicker numberPicker;
+    private static int playerCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +41,24 @@ public class PlayerSelect extends AppCompatActivity {
             @Override
             public void onValueChange(NumberPicker numberPicker, int i, int i1) {
                 textView.setText(String.format("Number Of Players: %s", i1));
-                startActivity(new Intent(PlayerSelect.this, PlayerSelect.class));
+                playerCount = i1;
+
             }
         });
+        Button backBtn = findViewById(R.id.button2);
+        backBtn.setOnClickListener(view -> {
+
+            Toast.makeText(this, "You clicked the confirm button!",
+                    Toast.LENGTH_SHORT).show();
+
+            Log.i("Learn", "Back Button Clicked!");
+            startActivity(new Intent(PlayerSelect.this, GameActivity.class));
+        });
+
+
+    }
+    public static int getPlayercount()
+    {
+        return playerCount;
     }
 }

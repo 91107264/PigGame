@@ -33,8 +33,7 @@ public class GameActivity extends AppCompatActivity
             return insets;
         });
 
-        // TODO: Get the number of players from player select activity
-        int numPlayers = 3;
+        int numPlayers = PlayerSelect.getPlayercount();
 
         players = new Player[numPlayers];
 
@@ -54,7 +53,7 @@ public class GameActivity extends AppCompatActivity
     {
         int[] dice = generateDice(2, 6);
 
-        (new Handler()).postDelayed(this::updateUI, 1000);
+        updateUI();
 
         boolean gotOne = players[playerIndex].processRoll(dice);
 
@@ -63,7 +62,7 @@ public class GameActivity extends AppCompatActivity
             endTurn(null);
         }
 
-        (new Handler()).postDelayed(this::updateUI, 1000);
+        updateUI();
     }
 
     public void endTurn(View view)
