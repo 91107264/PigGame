@@ -20,6 +20,7 @@ public class GameActivity extends AppCompatActivity
     int playerIndex;
     Player[] players;
 
+    public static Player winner;
     int[] dice;
 
     @Override
@@ -76,7 +77,33 @@ public class GameActivity extends AppCompatActivity
             playerIndex = 0;
         }
 
+        if (players[playerIndex].totalScore  >= 100){
+            winner = getWinner();
+
+            Toast.makeText(this, "Game over! " + winner.getName(),
+                    Toast.LENGTH_SHORT).show();
+
+           //startActivity(new Intent(GameActivity.this,EndActvity.class));
+        }
+
         updateUI();
+    }
+
+    public Player getWinner()
+    {
+        int max = players[0].totalScore;
+        Player maxPlayer = players[0];
+
+        for( int i=1; i<players.length; i++)
+        {
+            if( players[i].totalScore > max)
+            {
+                max= players[i].totalScore;
+                maxPlayer = players[i];
+            }
+        }
+
+        return maxPlayer;
     }
 
     public int[] generateDice(int numDice, int numFaces)
@@ -133,6 +160,7 @@ public class GameActivity extends AppCompatActivity
                     currentTV = (TextView) findViewById(R.id.playerTV5);
                     break;
             }
+
 
             Log.i("DEBUG", i + "");
             currentTV.setText(players[i].getName() + " - Money: "
