@@ -19,6 +19,9 @@
             android:name=".GameActivity"
             android:exported="true"/>
         <activity
+            android:name=".EndActivity"
+            android:exported="true"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

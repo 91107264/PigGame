@@ -77,13 +77,13 @@ public class GameActivity extends AppCompatActivity
             playerIndex = 0;
         }
 
-        if (players[playerIndex].totalScore  >= 100){
+        if (players[playerIndex].totalScore  >= 10){
             winner = getWinner();
 
             Toast.makeText(this, "Game over! " + winner.getName(),
                     Toast.LENGTH_SHORT).show();
 
-           //startActivity(new Intent(GameActivity.this,EndActvity.class));
+           startActivity(new Intent(GameActivity.this,EndActivity.class));
         }
 
         updateUI();
