@@ -77,7 +77,7 @@ public class GameActivity extends AppCompatActivity
             playerIndex = 0;
         }
 
-        if (players[playerIndex].totalScore  >= 10){
+        if (players[playerIndex].totalScore  >= 100){
             winner = getWinner();
 
             Toast.makeText(this, "Game over! " + winner.getName(),
