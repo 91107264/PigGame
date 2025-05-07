@@ -28,6 +28,11 @@ public class EndActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        TextView resultTV = findViewById(R.id.textView3);
+        Player winner = GameActivity.winner;
+        resultTV.setText(winner.getName() + " won with a score of " + winner.totalScore + "!");
+
         Button backBtn = findViewById(R.id.button3);
         backBtn.setOnClickListener(view -> {
 
