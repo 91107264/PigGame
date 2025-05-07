@@ -1,0 +1,18 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20250409111138
+Username: MVUSD\91107264
+RunAs User: MVUSD\91107264
+Configuration Name: 
+Machine: VVHS-P414-S10 (Microsoft Windows NT 10.0.19044.0)
+Host Application: powershell.exe -NoExit -ExecutionPolicy Bypass -File C:\Program Files\Android\Android Studio\plugins\terminal\shell-integrations\powershell\powershell-integration.ps1
+Process ID: 23116
+PSVersion: 5.1.19041.3031
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.3031
+BuildVersion: 10.0.19041.3031
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
